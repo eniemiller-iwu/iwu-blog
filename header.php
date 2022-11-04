@@ -26,7 +26,22 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'iwu' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<div class="info-bar" style="padding:0.3% 4%; width:100%; background-color:#004E42; height:auto; text-align:right;">
+		<form action="#">
+			
+			<select name="languages" id="lang">
+			<option value="javascript">IWU.edu</option>
+				<option value="javascript">Admissions</option>
+				<option value="php">Giving</option>
+				<option value="java">Athletics</option>
+				<option value="golang">Alumni</option>
+				<option value="python">Student Life</option>
+				
+			</select>
+			
+		</form>
+		</div>
+		<div class="site-branding" style="display:flex;">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
