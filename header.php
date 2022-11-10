@@ -23,12 +23,15 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'iwu' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="info-bar" style="padding:0.3% 4%; width:100%; background-color:#004E42; height:auto; text-align:right;">
+	<div class="info-bar" style="padding:0.3% 4%; width:100%; background-color:#004E42; height:auto; display:flex; justify-content:space-between; align-items:center">
+		<div>
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/images/iwu-logo-info-bar.png' ); ?>" />
+		</div>	
 		<form action="#">
-			
 			<select name="languages" id="lang">
 			<option value="javascript">IWU.edu</option>
 				<option value="javascript">Admissions</option>
@@ -36,11 +39,10 @@
 				<option value="java">Athletics</option>
 				<option value="golang">Alumni</option>
 				<option value="python">Student Life</option>
-				
 			</select>
 			
 		</form>
-		</div>
+	</div>
 		<div class="site-branding" style="display:flex;">
 			<?php
 			the_custom_logo();

@@ -129,8 +129,10 @@ function iwu_widgets_init() {
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		)
+		),
+		
 	);
+	
 }
 add_action( 'widgets_init', 'iwu_widgets_init' );
 
@@ -176,3 +178,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Register Sidebars
+function custom_sidebars() {
+
+	$args = array(
+		'id'            => 'footer-1',
+		'name'          => __( 'Footer 1', 'text_domain' ),
+		'description'   => __( 'Footer 1 Column', 'text_domain' ),
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer-2',
+		'name'          => __( 'Footer 2', 'text_domain' ),
+		'description'   => __( 'Footer 2 Column', 'text_domain' ),
+	);
+	register_sidebar( $args );
+	$args = array(
+		'id'            => 'footer-3',
+		'name'          => __( 'Footer 3', 'text_domain' ),
+		'description'   => __( 'Footer 3 Column', 'text_domain' ),
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'custom_sidebars' );

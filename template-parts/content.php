@@ -33,6 +33,7 @@
 
 	<div class="entry-content">
 		<?php
+		
 		the_content(
 			sprintf(
 				wp_kses(

@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/* Custom IWU Colors via https://www.iwu.edu/identity/color-palettes.html. */
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -388,7 +389,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -401,6 +402,8 @@ h4,
 h5,
 h6 {
   clear: both;
+  font-family: "Source Serif Pro", "Sentinel SSm B", serif;
+  color: #006747;
 }
 
 p {
@@ -519,13 +522,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
+  color: #006747;
 }
 a:visited {
-  color: #800080;
+  color: #004e42;
 }
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #6cc24a;
 }
 a:focus {
   outline: thin dotted;
@@ -615,6 +618,43 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-column-gap: 50px;
+  grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
+}
+
+.site-header {
+  grid-area: header;
+}
+
+.site-main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  padding: 0 30px;
+}
+
+.widget-area {
+  grid-area: sidebar;
+  padding: 0 30px;
+}
+
+.site-footer {
+  grid-area: footer;
+}
+
+.wrapper-content {
+  display: flex;
+  justify-content: center;
+}
+
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/

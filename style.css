@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
+/* Custom IWU Colors via https://www.iwu.edu/identity/color-palettes.html. */
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
@@ -524,11 +525,11 @@ a {
 }
 
 a:visited {
-	color: #004E42;
+	color: #004e42;
 }
 
 a:hover, a:focus, a:active {
-	color: #6CC24A;
+	color: #6cc24a;
 }
 
 a:focus {
@@ -626,7 +627,8 @@ textarea {
 .site {
 	display: grid;
 	grid-template-columns: auto 25%;
-	grid-template-areas: "header header" "main sidebar" "footer footer";
+	grid-column-gap: 50px;
+	grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
 }
 
 .site-header {
@@ -637,14 +639,21 @@ textarea {
 	grid-area: main;
 	overflow: hidden;
 	/* Resolves issue with <pre> elements forcing full width. */
+	padding: 0 30px;
 }
 
 .widget-area {
 	grid-area: sidebar;
+	padding: 0 30px;
 }
 
 .site-footer {
 	grid-area: footer;
+}
+
+.wrapper-content {
+	display: flex;
+	justify-content: center;
 }
 
 .no-sidebar .site {
@@ -661,6 +670,7 @@ textarea {
 .main-navigation {
 	display: block;
 	width: 100%;
+	background-color: #004e42;
 }
 
 .main-navigation ul {

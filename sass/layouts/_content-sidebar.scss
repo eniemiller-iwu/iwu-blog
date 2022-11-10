@@ -1,27 +1,40 @@
 .site {
 	display: grid;
 	grid-template-columns: auto ($size__site-sidebar);
+	// grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-column-gap: 50px;
 	grid-template-areas:
-		"header header"
-		"main sidebar"
-		"footer footer";
+		"header header header"
+		"main main sidebar"
+		"footer footer footer";
+		
 }
 
 .site-header {
 	grid-area: header;
+	// display: flex;
+	// flex-direction: row;
+	
 }
 
 .site-main {
 	grid-area: main;
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	padding: 0 30px;
 }
 
 .widget-area {
 	grid-area: sidebar;
+	padding:0 30px;
+	
 }
 
 .site-footer {
 	grid-area: footer;
 }
 
+.wrapper-content {
+	display: flex;
+	justify-content: center;
+}
 @import "no-sidebar";

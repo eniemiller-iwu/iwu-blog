@@ -40,3 +40,10 @@ function google_fonts() {
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
+
+
+add_action('wp_footer', 'iwu_action_footer'); 
+function iwu_action_footer() { 
+    echo '<div style="background: green; color: white; text-align: right;">IWU Blogs was here.</div>'; 
+}
+
