@@ -702,6 +702,8 @@ textarea {
 
 .main-navigation ul ul a {
 	width: 200px;
+	color: #fff;
+	font-weight: 700;
 }
 
 .main-navigation ul li:hover > ul,
@@ -716,6 +718,8 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
 }
 
 /* Small menu. */
