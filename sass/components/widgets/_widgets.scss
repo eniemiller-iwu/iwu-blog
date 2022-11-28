@@ -1,8 +1,24 @@
 .widget {
 	margin: 0 0 1.5em;
-
+	padding:10px;
+	border:1px solid #efefef;
+	border-radius: 5px;
 	// Make sure select elements fit in widgets.
 	select {
 		max-width: 100%;
 	}
+}
+
+.footer-widgets {
+	grid-area: footer-widgets;
+	background-color:$titan_dark;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+		.footer-widget {
+			h2 {
+				color:#FFF;
+				font-weight: 600;
+			}
+		}
 }

@@ -182,24 +182,34 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 function custom_sidebars() {
 
 	$args = array(
-		'id'            => 'footer-1',
+		'id'            => 'footer1',
 		'name'          => __( 'Footer 1', 'text_domain' ),
 		'description'   => __( 'Footer 1 Column', 'text_domain' ),
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget' => '</div>',
 	);
 	register_sidebar( $args );
 
 	$args = array(
-		'id'            => 'footer-2',
+		'id'            => 'footer2',
 		'name'          => __( 'Footer 2', 'text_domain' ),
 		'description'   => __( 'Footer 2 Column', 'text_domain' ),
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget' => '</div>',
 	);
 	register_sidebar( $args );
+
 	$args = array(
-		'id'            => 'footer-3',
+		'id'            => 'footer3',
 		'name'          => __( 'Footer 3', 'text_domain' ),
 		'description'   => __( 'Footer 3 Column', 'text_domain' ),
+		'before_widget' => '<div class="footer-widget">',
+		'after_widget' => '</div>',
 	);
 	register_sidebar( $args );
 
 }
 add_action( 'widgets_init', 'custom_sidebars' );
+
+
+function my_excerpt_length($length){ return 80; } add_filter('excerpt_length', 'my_excerpt_length');

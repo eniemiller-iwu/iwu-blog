@@ -27,23 +27,25 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'iwu' ); ?></a>
 
 	<header id="masthead" class="site-header">
-	<div class="info-bar" style="padding:0.3% 4%; width:100%; background-color:#004E42; height:auto; display:flex; justify-content:space-between; align-items:center">
-		<div>
-			<img src="<?php echo esc_url( get_template_directory_uri() . '/images/iwu-logo-info-bar.png' ); ?>" />
-		</div>	
-		<form action="#">
-			<select name="languages" id="lang">
-			<option value="javascript">IWU.edu</option>
-				<option value="javascript">Admissions</option>
-				<option value="php">Giving</option>
-				<option value="java">Athletics</option>
-				<option value="golang">Alumni</option>
-				<option value="python">Student Life</option>
-			</select>
-			
-		</form>
-	</div>
+	
+			<div class="info-bar" style="">
+				<div>
+					<img src="<?php echo esc_url( get_template_directory_uri() . '/images/iwu-logo-info-bar.png' ); ?>" />
+				</div>	
+				<form action="#">
+					<select name="languages" id="lang">
+					<option value="javascript">IWU.edu</option>
+						<option value="javascript">Admissions</option>
+						<option value="php">Giving</option>
+						<option value="java">Athletics</option>
+						<option value="golang">Alumni</option>
+						<option value="python">Student Life</option>
+					</select>
+				</form>
+			</div>
+		
 		<div class="site-branding" style="display:flex;">
+			<div class="wrapper-site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -60,8 +62,9 @@
 				?>
 				<p class="site-description"><?php echo $iwu_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
+			</div>
 		</div><!-- .site-branding -->
-
+		
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'iwu' ); ?></button>
 			<?php
@@ -73,4 +76,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->

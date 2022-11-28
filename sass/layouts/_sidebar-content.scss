@@ -1,10 +1,10 @@
 .site {
-	display: grid;
-	grid-template-columns: ($size__site-sidebar) auto;
-	grid-template-areas:
-		"header header"
-		"sidebar main"
-		"footer footer";
+	// display: grid;
+	// grid-template-columns: ($size__site-sidebar) auto;
+	// grid-template-areas:
+	// "header header header"
+	// "main main sidebar"
+	// "footer footer footer";
 }
 
 .site-header {

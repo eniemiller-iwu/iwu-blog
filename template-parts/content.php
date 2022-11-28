@@ -33,7 +33,7 @@
 
 	<div class="entry-content">
 		<?php
-		
+		if ( is_home() || is_category()||is_archive()){ the_excerpt(''); }else {
 		the_content(
 			sprintf(
 				wp_kses(
@@ -55,6 +55,7 @@
 				'after'  => '</div>',
 			)
 		);
+	}
 		?>
 	</div><!-- .entry-content -->
 

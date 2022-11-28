@@ -10,13 +10,8 @@
  */
 
 ?>
-<?php	
-	if ( ! is_active_sidebar( 'footer-1' ) ) {
-		return;
-	}
-	
-?>
-	
+
+
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'iwu' ) ); ?>">
