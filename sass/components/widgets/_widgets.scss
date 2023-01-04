@@ -11,11 +11,20 @@
 
 .footer-widgets {
 	grid-area: footer-widgets;
-	background-color:$titan_dark;
+	width: 1400px;
+	// background-color:$titan_dark;
 	display: flex;
-	justify-content: space-around;
-	align-items: stretch;
+	
+	justify-content: space-between;
+	align-items: stretch; 
 		.footer-widget {
+			display: flex;
+			flex-direction: column;
+			width: calc(100% / 3.1);
+			padding: 0.73em;
+			background-color:$titan_dark;
+
+			
 			h2 {
 				color:#FFF;
 				font-weight: 600;

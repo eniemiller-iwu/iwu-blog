@@ -10,7 +10,7 @@
 		". main sidebar ."
 		// "footer-widgets footer-widgets footer-widgets"
 		"footer footer footer footer";
-	grid-template-columns: auto 900px 300px auto;	
+	grid-template-columns: auto 850px 350px auto;	
 }
 
 .site-header {
@@ -22,10 +22,10 @@
 	padding:10px 0;
 	display:flex;
 	justify-content: center;
-	max-width: 1400px;
+	width:100%;
 	.wrapper-site-branding {
 		margin:auto 0;
-		width:100%;
+	
 	}
 }
 .site-main {
@@ -45,12 +45,19 @@
 
 .site-footer {
 	grid-area: footer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width:100%;
+	background-color: $titan-normal;
+	padding-bottom: 6em;
 }
 
 .info-bar {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width:100%;
 	background-color: $titan-normal;

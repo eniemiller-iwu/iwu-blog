@@ -44,7 +44,7 @@
 				</form>
 			</div>
 		
-		<div class="site-branding" style="display:flex;">
+		<div class="site-branding" >
 			<div class="wrapper-site-branding">
 			<?php
 			the_custom_logo();
@@ -66,6 +66,7 @@
 		</div><!-- .site-branding -->
 		
 		<nav id="site-navigation" class="main-navigation">
+			<div class="wrapper-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'iwu' ); ?></button>
 			<?php
 			wp_nav_menu(
@@ -75,6 +76,7 @@
 				)
 			);
 			?>
+			</div>
 		</nav><!-- #site-navigation -->
 		
 	</header><!-- #masthead -->

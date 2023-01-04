@@ -185,8 +185,8 @@ function custom_sidebars() {
 		'id'            => 'footer1',
 		'name'          => __( 'Footer 1', 'text_domain' ),
 		'description'   => __( 'Footer 1 Column', 'text_domain' ),
-		'before_widget' => '<div class="footer-widget">',
-		'after_widget' => '</div>',
+		'before_widget' => '',
+		'after_widget' => '',
 	);
 	register_sidebar( $args );
 
@@ -194,8 +194,8 @@ function custom_sidebars() {
 		'id'            => 'footer2',
 		'name'          => __( 'Footer 2', 'text_domain' ),
 		'description'   => __( 'Footer 2 Column', 'text_domain' ),
-		'before_widget' => '<div class="footer-widget">',
-		'after_widget' => '</div>',
+		'before_widget' => '',
+		'after_widget' => '',
 	);
 	register_sidebar( $args );
 
@@ -203,8 +203,8 @@ function custom_sidebars() {
 		'id'            => 'footer3',
 		'name'          => __( 'Footer 3', 'text_domain' ),
 		'description'   => __( 'Footer 3 Column', 'text_domain' ),
-		'before_widget' => '<div class="footer-widget">',
-		'after_widget' => '</div>',
+		'before_widget' => '',
+		'after_widget' => '',
 	);
 	register_sidebar( $args );
 

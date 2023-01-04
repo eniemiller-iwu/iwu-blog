@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: IWU Scores
 Theme URI: http://underscores.me/
@@ -640,7 +641,7 @@ textarea {
 .site {
 	display: grid;
 	grid-template-areas: "header header header header" ". main sidebar ." "footer footer footer footer";
-	grid-template-columns: auto 900px 300px auto;
+	grid-template-columns: auto 850px 350px auto;
 }
 
 .site-header {
@@ -651,12 +652,11 @@ textarea {
 	padding: 10px 0;
 	display: flex;
 	justify-content: center;
-	max-width: 1400px;
+	width: 100%;
 }
 
 .site-branding .wrapper-site-branding {
 	margin: auto 0;
-	width: 100%;
 }
 
 .site-main {
@@ -674,12 +674,19 @@ textarea {
 
 .site-footer {
 	grid-area: footer;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background-color: #006747;
+	padding-bottom: 6em;
 }
 
 .info-bar {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	width: 100%;
 	background-color: #006747;
@@ -697,9 +704,16 @@ textarea {
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
-	display: block;
+	display: flex;
+	justify-content: flex-start;
+	width: 66%;
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+.main-navigation .wrapper-navigation {
+	margin: auto 0;
 	width: 100%;
-	background-color: #004e42;
 }
 
 .main-navigation ul {
@@ -710,6 +724,7 @@ textarea {
 }
 
 .main-navigation ul ul {
+	display: inline-block;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
@@ -735,9 +750,11 @@ textarea {
 
 .main-navigation ul ul a {
 	width: 200px;
-	color: #801a1a;
+	color: #004e42;
 	font-weight: 700;
 	padding: 10px 20px;
+	background-color: #FFF;
+	font-size: 1.25em;
 }
 
 .main-navigation ul li:hover > ul,
@@ -747,13 +764,22 @@ textarea {
 
 .main-navigation li {
 	position: relative;
+	margin-right: 15px;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #941b1b;
+	color: #006747;
 	font-weight: 700;
+	font-size: 1.5em;
+}
+
+.main-navigation .menu-item-has-children > a:after {
+	color: #004e42;
+	content: ' ▼';
+	font-size: 10px;
+	vertical-align: 3px;
 }
 
 /* Small menu. */
@@ -847,10 +873,18 @@ textarea {
 
 .footer-widgets {
 	grid-area: footer-widgets;
-	background-color: #004e42;
+	width: 1400px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: stretch;
+}
+
+.footer-widgets .footer-widget {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% / 3.1);
+	padding: 0.73em;
+	background-color: #004e42;
 }
 
 .footer-widgets .footer-widget h2 {

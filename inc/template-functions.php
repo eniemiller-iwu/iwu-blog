@@ -42,8 +42,3 @@ function google_fonts() {
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
 
-add_action('wp_footer', 'iwu_action_footer'); 
-function iwu_action_footer() { 
-    echo '<div style="background: green; color: white; text-align: right;">IWU Blogs was here.</div>'; 
-}
-
