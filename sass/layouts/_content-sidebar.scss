@@ -8,10 +8,18 @@
 	grid-template-areas:
 		"header header header header"
 		". main sidebar ."
-		// "footer-widgets footer-widgets footer-widgets"
 		"footer footer footer footer";
-	grid-template-columns: auto 850px 350px auto;	
+	// grid-template-columns: auto 850px 350px auto;	
+	grid-template-columns: 1fr 3fr 1fr 1fr;
+	
 }
+@media(max-width: $md_break) {
+	.site {
+		grid-template-columns: repeat(auto-fit, minmax(4fr, 4fr));;
+	}
+}
+
+
 
 .site-header {
 	grid-area: header;
@@ -30,7 +38,7 @@
 }
 .site-main {
 	grid-area: main;
-	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+	// overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 	padding: 0 30px;
 	
 	
