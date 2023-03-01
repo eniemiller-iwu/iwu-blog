@@ -1,20 +1,31 @@
 .widget {
 	margin: 0 0 1.5em;
 	padding:10px;
-	border:1px solid #efefef;
+	// border:1px solid #efefef;
 	border-radius: 5px;
 	// Make sure select elements fit in widgets.
 	select {
 		max-width: 100%;
 	}
 }
-
+aside .widget ul, aside .widget ol  {
+	margin:0;	
+}
+aside .widget li {
+	margin-bottom: 10px;
+}
+aside .wp-block-latest-posts.wp-block-latest-posts__list {
+	list-style-type: disc;
+	padding-left:10px;
+	li {
+	margin-left:5px;
+	}
+}
 .footer-widgets {
 	grid-area: footer-widgets;
 	width: 1400px;
 	// background-color:$titan_dark;
 	display: flex;
-	
 	justify-content: space-between;
 	align-items: stretch; 
 		.footer-widget {

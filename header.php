@@ -46,37 +46,45 @@
 		
 		<div class="site-branding" >
 			<div class="wrapper-site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					if ( is_front_page() && is_home() ) :
+						?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php
+					else :
+						?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php
+					endif;
+					$iwu_description = get_bloginfo( 'description', 'display' );
+					if ( $iwu_description || is_customize_preview() ) :
+						?>
+					<p class="site-description"><?php echo $iwu_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+				<nav id="site-navigation" class="main-navigation">
+				<div class="wrapper-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '&#x2630;', 'iwu' ); ?></button>
 				<?php
-			endif;
-			$iwu_description = get_bloginfo( 'description', 'display' );
-			if ( $iwu_description || is_customize_preview() ) :
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
 				?>
-				<p class="site-description"><?php echo $iwu_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-			</div>
+				</div>
+			</nav><!-- #site-navigation -->
+			</div><!-- .wrapper-site-branding -->
+			
 		</div><!-- .site-branding -->
+		<div class="custom-logo">
+			
+				<?php
+				the_custom_logo();
+				?>
+			
 		
-		<nav id="site-navigation" class="main-navigation">
-			<div class="wrapper-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'iwu' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-			</div>
-		</nav><!-- #site-navigation -->
+		</div>
+		
 		
 	</header><!-- #masthead -->

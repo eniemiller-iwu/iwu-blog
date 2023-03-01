@@ -7,12 +7,19 @@ h6 {
 	clear: both;
 	font-family: "Source Serif Pro", "Sentinel SSm B", serif; 
 	color:#006747; //Pantone 342 - IWU Green
+	line-height: 1.2;
 
 }
 h1 {
 	font-size: 48px;
 }
-
+.site-title {
+	font-size: 36px;
+	a {
+		text-decoration: none;
+		}
+	
+}
 .home {
 
 	.entry-title {
@@ -23,5 +30,22 @@ h1 {
 			
 		}
 	}
+	.entry-meta {
+		font-style: italic;
+		font-size: 14px;
+	}
 
+}
+
+@media(max-width: $md_break) {
+	.home {
+		.entry-title {
+			font-size:32px;
+			line-height: 1.2s5em;
+		}
+	}
+	.site-title {
+		width:100%;
+		text-align: center;
+	}
 }
