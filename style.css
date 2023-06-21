@@ -23,7 +23,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
+>>> TABLE OF CONTENTS: 
 ----------------------------------------------------------------
 # Generic
 	- Normalize
@@ -403,8 +403,8 @@ h5,
 h6 {
 	clear: both;
 	font-family: "Source Serif Pro", "Sentinel SSm B", serif;
-	color: #006747;
 	line-height: 1.2;
+	color: #006747;
 }
 
 h1 {
